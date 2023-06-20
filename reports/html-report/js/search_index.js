@@ -1,0 +1,1 @@
+var index = {"Tags":{},"Specs":{"SPECIFICATION TITLE":["specs/tests/Example/gauge_example.html"],"WEB TESTING":["specs/tests/Example/google_example.html"]}};

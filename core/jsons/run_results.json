@@ -1,0 +1,12 @@
+{
+  "Example": {
+    "SPECIFICATION TITLE": {
+      "SCENARIO TITLE - Actions": "PASS",
+      "SCENARIO TITLE - Passed verification": "PASS",
+      "SCENARIO TITLE - Failed verification": "FAIL"
+    },
+    "WEB TESTING": {
+      "Search on google and check the answer": "PASS"
+    }
+  }
+}

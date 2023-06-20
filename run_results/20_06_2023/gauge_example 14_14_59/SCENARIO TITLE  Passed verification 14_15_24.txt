@@ -1,0 +1,3 @@
+20_06_2023 14_15_24   TEST 'SCENARIO TITLE - Passed verification' STARTED
+20.06.2023 14:15:24   PASSED: The string 'TEST' is equal to the string 'TEST'
+20.06.2023 14:15:24   INFO: The test 'SCENARIO TITLE - Passed verification' result is PASS

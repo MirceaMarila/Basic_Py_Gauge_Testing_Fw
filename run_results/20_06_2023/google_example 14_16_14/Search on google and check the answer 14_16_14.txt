@@ -1,0 +1,6 @@
+20_06_2023 14_16_14   TEST 'Search on google and check the answer' STARTED
+20.06.2023 14:16:19   INFO: Accessed the website 'https://www.google.com/'
+20.06.2023 14:16:19   INFO: Clicked on 'Respinge tot' button
+20.06.2023 14:16:20   INFO: Wrote 'what is gauge testing framework' in the 'search' textbox
+20.06.2023 14:16:24   PASSED: The element with text 'Gauge: Open Source Test Automation Framework' is displayed and it is 'clickable'
+20.06.2023 14:16:24   INFO: The test 'Search on google and check the answer' result is PASS
