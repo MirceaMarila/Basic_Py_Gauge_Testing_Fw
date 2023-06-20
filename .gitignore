@@ -27,6 +27,8 @@ share/python-wheels/
 MANIFEST
 venv
 playground.py
+run_results
+.gauge/screenshots
 
 
 # PyInstaller
