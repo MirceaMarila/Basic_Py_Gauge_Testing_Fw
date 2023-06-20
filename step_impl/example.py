@@ -3,9 +3,9 @@ from getgauge.python import step
 from core.base_test import BaseTest as bt
 
 
-@step("This is a step that logs HELLO WORLD!")
-def log_hello_world():
-    bt.logger.log_info("HELLO WORLD!")
+@step("This is a step that logs <text>")
+def log_hello_world(text):
+    bt.logger.log_info(text)
 
 
 @step("This is a step that logs the numbers between <start> and <end>")
