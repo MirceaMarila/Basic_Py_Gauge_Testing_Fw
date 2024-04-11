@@ -6,7 +6,7 @@ from os.path import isfile, join
 from getgauge.python import Screenshots
 
 from core.settings import BASE_PATH
-from core.utils import replace_all_special_characters, get_the_latest_spec_folder
+from core.utils import eliminate_all_special_characters, get_the_latest_spec_folder
 from core.json_methods import get_run_setting
 
 
@@ -23,7 +23,7 @@ class Logger:
         current_timestamp = current_date + " " + current_time
         spec_file_name = spec_file_path.split("\\")[-1].split(".")[0]
         old_test_name = test_name
-        test_name = replace_all_special_characters(test_name)
+        test_name = eliminate_all_special_characters(test_name)
 
         if not os.path.isdir(BASE_PATH + f"\\run_results"):
             os.mkdir(BASE_PATH + f"\\run_results")
@@ -58,7 +58,7 @@ class Logger:
             if not flag:
                 self.log_file_path = BASE_PATH + f"\\run_results\\{current_date}\\{spec_result_folder}"
 
-        self.log_file_name = replace_all_special_characters(f"{test_name} ") + current_time + ".txt"
+        self.log_file_name = eliminate_all_special_characters(f"{test_name} ") + current_time + ".txt"
         print("\n" + self.CWHITE + current_timestamp + f"   TEST \'{old_test_name}\' STARTED" + self.CEND)
 
         with open(self.log_file_path + "\\" + self.log_file_name, 'w') as log_file:

@@ -12,7 +12,7 @@ from core.json_methods import get_run_setting, get_spec_property
 from core.settings import BASE_PATH
 
 
-def replace_all_special_characters(text):
+def eliminate_all_special_characters(text):
     text = text.replace("[", "")
     text = text.replace("-", "")
     text = text.replace("+", "")

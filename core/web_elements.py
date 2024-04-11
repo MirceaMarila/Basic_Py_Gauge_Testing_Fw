@@ -160,7 +160,8 @@ class TextBox(WebElement):
                     f"//textarea[@name=\"{value.lower() if value else text.lower()}\"]|" \
                     f"//textarea[@placeholder=\"{value if value else text}\"]|" \
                     f"//textarea[@type=\"{value}\"]|" \
-                    f"//textarea[@id=\"{value}\"]"
+                    f"//textarea[@id=\"{value}\"]|" \
+                    f"//textarea[@autocomplete]"
 
         super().__init__(xpath)
 

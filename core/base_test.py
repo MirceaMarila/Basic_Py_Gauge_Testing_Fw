@@ -8,14 +8,14 @@ from core.logger import Logger
 from core.utils import get_the_nr_of_steps_in_scenario, focus_on_driver_window
 from core.json_methods import get_run_setting, get_spec_property, set_spec_property, get_test_utils, set_test_utils, \
     save_result_to_json
-from core.web_driver import ChromeDriver, ElementFinder
+from core.web_driver import get_chrome_driver, ElementFinder
 import pyautogui
 from win10toast import ToastNotifier
 from core.settings import BASE_PATH
 
 
 class BaseTest:
-    driver: ChromeDriver = None
+    driver: None
     finder: ElementFinder = None
     custom_asserts: CustomAsserts = None
     logger: Logger = None
@@ -25,9 +25,7 @@ class BaseTest:
 @before_scenario
 def before_scenario(context: ExecutionContext):
     pyautogui.FAILSAFE = False
-    BaseTest.driver = ChromeDriver(options=['--incognito'])
-    BaseTest.driver.execute_script("window.focus();")
-    BaseTest.driver.maximize_window()
+    BaseTest.driver = get_chrome_driver(options=['--incognito'])
     focus_on_driver_window()
 
     BaseTest.finder = ElementFinder(BaseTest.driver)

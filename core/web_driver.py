@@ -1,18 +1,23 @@
 from selenium import webdriver
 from selenium.webdriver.support import expected_conditions as ec
 from selenium.webdriver.support.ui import WebDriverWait
+from get_chrome_driver import GetChromeDriver
 
 
-class ChromeDriver(webdriver.Chrome):
-    def __init__(self, options=None):
-        chrome_options = webdriver.ChromeOptions()
-        chrome_options.binary_location = "C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe"
+def get_chrome_driver(options=None):
+    get_driver = GetChromeDriver()
+    get_driver.install()
 
-        if options:
-            for option in options:
-                chrome_options.add_argument(option)
+    chrome_options = webdriver.ChromeOptions()
+    if options:
+        for option in options:
+            chrome_options.add_argument(option)
 
-        super().__init__(executable_path=r"chromedriver.exe", options=chrome_options)
+    driver = webdriver.Chrome(options=chrome_options)
+    driver.execute_script("window.focus();")
+    driver.maximize_window()
+
+    return driver
 
 
 class ElementFinder:
