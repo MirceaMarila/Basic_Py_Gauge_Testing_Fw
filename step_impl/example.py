@@ -8,7 +8,7 @@ def log_hello_world(text):
     bt.logger.log_info(text)
 
 
-@step("This is a step that logs the numbers between <start> and <end>")
+@step("This is a step that logs the numbers between <start_number> and <end_number>")
 def log_numbers_in_range(start, end):
     if not start.isnumeric():
         bt.logger.log_info(start + " is not a number!")
