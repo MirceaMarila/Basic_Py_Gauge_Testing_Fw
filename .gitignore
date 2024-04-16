@@ -29,7 +29,7 @@ venv
 playground.py
 run_results
 .gauge/screenshots
-step_impl/test.py
+
 
 
 # PyInstaller
